@@ -1,1 +1,5 @@
-
+# Software output states after application safety checks.
+# Bits 0 through 7 correspond to OUT1 through OUT8.
+# 1 = on; 0 = off.
+# This reports software output states, not measured hardware states.
+uint8 state
