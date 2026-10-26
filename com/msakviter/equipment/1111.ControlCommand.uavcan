@@ -1,0 +1,10 @@
+# Control commands: 18 channels, 10 bits per channel.
+uint10[18] cmd
+
+# This board uses cmd[17] only.
+# cmd[0] through cmd[16] remain part of the message.
+# cmd[17] bits 0 through 7 request OUT1 through OUT8.
+# 1 = request on; 0 = request off.
+# cmd[17] bits 8 and 9 must be zero.
+# Reject the command if either reserved bit is set.
+# Actual outputs are subject to application safety checks.
